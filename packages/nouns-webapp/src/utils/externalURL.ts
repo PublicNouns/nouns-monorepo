@@ -10,7 +10,7 @@ export const externalURL = (externalURL: ExternalURL) => {
     case ExternalURL.docs:
       return 'https://docs.publicnouns.wtf';
     case ExternalURL.discord:
-      return 'https://discord.gg/vnp6BEMf';
+      return 'https://discord.gg/mBPTVBnmbY';
     case ExternalURL.twitter:
       return 'https://twitter.com/PublicNouns';
     case ExternalURL.discourse:
