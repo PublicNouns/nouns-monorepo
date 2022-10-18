@@ -2,78 +2,79 @@ import React from 'react';
 import classes from './NoundersPage.module.css';
 import Section from '../../layout/Section';
 import { Col, Row, Card } from 'react-bootstrap';
-import pfp4156 from '../../assets/nounder-pfps/4156.png';
-import pfp9999 from '../../assets/nounder-pfps/9999.png';
-import pfpCryptoseneca from '../../assets/nounder-pfps/cryptoseneca.png';
-import pfpDevcarrot from '../../assets/nounder-pfps/devcarrot.png';
-import pfpDom from '../../assets/nounder-pfps/dom.png';
-import pfpKai from '../../assets/nounder-pfps/kai.png';
-import pfpSolimander from '../../assets/nounder-pfps/solimander.png';
-import pfpGremplin from '../../assets/nounder-pfps/gremplin.png';
-import pfpTimpers from '../../assets/nounder-pfps/timpers.png';
-import pfpVapeape from '../../assets/nounder-pfps/vapeape.png';
+import pfpSminert from '../../assets/nounder-pfps/sminert.jpg';
+import pfp0xd2 from '../../assets/nounder-pfps/0xd2_eth.jpg';
+import pfp0xjoshua from '../../assets/nounder-pfps/0xjoshua.jpg';
+import pfpAbbey from '../../assets/nounder-pfps/abbey.jpg';
+import pfpAuryn from '../../assets/nounder-pfps/auryn.jpg';
+import pfpBinji from '../../assets/nounder-pfps/binji.jpg';
+import pfpIzk from '../../assets/nounder-pfps/isaacpatka.png';
+import pfpMz from '../../assets/nounder-pfps/mZargham.jpg';
+import pfpNotscott from '../../assets/nounder-pfps/notscott.jpg';
+import pfpSimpop from '../../assets/nounder-pfps/sim_pop.jpg';
 import { Trans } from '@lingui/macro';
+import Link from '../../components/Link';
 
 const bios = [
   {
-    name: '4156',
-    image: pfp4156,
+    name: 'sminert',
+    image: pfpSminert,
     description: undefined,
-    handle: 'punk4156',
+    handle: 'sminert',
   },
   {
-    name: 'cryptoseneca',
-    image: pfpCryptoseneca,
+    name: 'isaacpatka',
+    image: pfpIzk,
     description: undefined,
-    handle: 'cryptoseneca',
+    handle: 'isaacpatka',
   },
   {
-    name: 'Kai@eboy',
-    image: pfpKai,
+    name: 'mZargham',
+    image: pfpMz,
     description: undefined,
-    handle: 'eBoyArts',
+    handle: 'mZargham',
   },
   {
-    name: 'dom',
-    image: pfpDom,
+    name: '0xd2_eth',
+    image: pfp0xd2,
     description: undefined,
-    handle: 'dhof',
+    handle: '0xd2_eth',
   },
   {
-    name: 'vapeape',
-    image: pfpVapeape,
+    name: '0xJoshuaSL',
+    image: pfp0xjoshua,
     description: undefined,
-    handle: 'punk4464',
+    handle: '0xJoshuaSL',
   },
   {
-    name: 'gremplin',
-    image: pfpGremplin,
+    name: 'Sim_Pop',
+    image: pfpSimpop,
     description: undefined,
-    handle: 'gremplin',
+    handle: 'Sim_Pop',
   },
   {
-    name: 'solimander',
-    image: pfpSolimander,
+    name: 'notscottmoore',
+    image: pfpNotscott,
     description: undefined,
-    handle: '_solimander_',
+    handle: 'notscottmoore',
   },
   {
-    name: 'devcarrot',
-    image: pfpDevcarrot,
+    name: 'auryn_macmillan',
+    image: pfpAuryn,
     description: undefined,
-    handle: 'carrot_init',
+    handle: 'auryn_macmillan',
   },
   {
-    name: 'timpers',
-    image: pfpTimpers,
+    name: 'abbey_titcomb',
+    image: pfpAbbey,
     description: undefined,
-    handle: 'TimpersHD',
+    handle: 'abbey_titcomb',
   },
   {
-    name: '9999',
-    image: pfp9999,
+    name: 'binji_x',
+    image: pfpBinji,
     description: undefined,
-    handle: 'lastpunk9999',
+    handle: 'binji_x',
   },
 ];
 
@@ -131,33 +132,68 @@ const NoundersPage = () => {
     <Section fullWidth={true} className={classes.noundersPage}>
       <Col lg={{ span: 6, offset: 3 }}>
         <h2 style={{ marginBottom: '2rem' }}>
-          <Trans>The Nounders</Trans>
+          <Trans>The pNounders</Trans>
         </h2>
         <h3 style={{ marginBottom: '2rem' }}>
-          <Trans>3.5 artists, 6.5 technologists</Trans>
+          <Trans>Coalition of public goods enjoyers.</Trans>
         </h3>
         <Row style={{ marginBottom: '0rem' }}>
           <BioCards min={0} max={5} />
           <BioCards min={5} max={10} />
         </Row>
         <h3>
-          <Trans>Nounders' Reward</Trans>
+          <Trans>pNounders & Rewards</Trans>
         </h3>
-        <p style={{ textAlign: 'justify' }}>
+        <p>
+                  'pNounders' is the coalition of public good enjoyers from the following orgs that formed to launch Public Nouns together, and help steward early governance.
+        </p>
+        <ul>
+          <li>
+            <Link
+              text="MetaCartel"
+              url="https://twitter.com/meta_cartel"
+              leavesPage={true}
+            />
+          </li>
+          <li>
+            <Link text="Panvala" url="https://twitter.com/panvalahq" leavesPage={true} />
+          </li>
+          <li>
+            <Link text="Radicle" url="https://twitter.com/radicle" leavesPage={true} />
+          </li>
+          <li>
+            <Link text="Optimism" url="https://twitter.com/optimismFND" leavesPage={true} />
+          </li>
+          <li>
+            <Link text="Clr.fund" url="https://twitter.com/clrfund" leavesPage={true} />
+          </li>
+          <li>
+            <Link text="Gitcoin" url="https://twitter.com/gitcoin" leavesPage={true} />
+          </li>
+          <li>
+            <Link text="Moloch" url="https://twitter.com/molochDAO" leavesPage={true} />
+          </li>
+        </ul>
+        <p>
           <Trans>
-            All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's
-            founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun
-            for the first 5 years of the project will be sent to our multisig (5/10), where it will
-            be vested and distributed to individual Nounders.
+            Rewards: 
           </Trans>
         </p>
-        <p style={{ textAlign: 'justify' }}>
-          <Trans>
-            The Nounders reward is intended as compensation for our pre and post-launch
-            contributions to the project, and to help us participate meaningfully in governance as
-            the project matures. Since there are 10 Nounders, after 5 years each Nounder could
-            receive up to 1% of the Noun supply.
-          </Trans>
+        <p>
+          Every 30th Public Noun for the first year of the project (Public Noun ids #0, #30, #60, and so on) will be automatically sent to the pNounder's multisig to be vested and shared among the coalition to help steward early governance.
+        </p>
+        <p>
+            Every 30th Public Noun for the first year of the project (Public Noun ids #10, #40, #70, and so on) will be automatically sent to the
+            NounsDAO, for building such an amazing foundation that we could fork.
+        </p>
+        <p>
+            Every 30th Public Noun for the first year of the project (Public Noun ids #20, #50, #80, and so on) will be automatically sent to the
+            Public Nouns DAO, for rewards.
+        </p>
+        <p>
+            These distributions don't interfere with the cadence of the 12 hour auctions. Public Nouns
+            are sent directly to the recipient, and auctions continue on schedule
+            with the next available Public Noun ID.
         </p>
       </Col>
     </Section>

@@ -299,9 +299,7 @@ const Documentation = () => {
             </Accordion.Header>
             <Accordion.Body>
               <p>
-                <Trans>
                   'pNounders' is the coalition of public good enjoyers from the following orgs that formed to launch Public Nouns together, and help steward early governance.
-                </Trans>
               </p>
               <ul>
                 <li>
@@ -336,26 +334,20 @@ const Documentation = () => {
                 </Trans>
               </p>
               <p>
-                <Trans>Every 30th Public Noun for the first year of the project (Public Noun ids #0, #30, #60, and so on) will be automatically sent to the pNounder's multisig to be vested and shared among the coalition to help steward early governance.</Trans>
+                Every 30th Public Noun for the first year of the project (Public Noun ids #0, #30, #60, and so on) will be automatically sent to the pNounder's multisig to be vested and shared among the coalition to help steward early governance.
               </p>
               <p>
-                <Trans>
                   Every 30th Public Noun for the first year of the project (Public Noun ids #10, #40, #70, and so on) will be automatically sent to the
                   NounsDAO, for building such an amazing foundation that we could fork.
-                </Trans>
               </p>
               <p>
-                <Trans>
                   Every 30th Public Noun for the first year of the project (Public Noun ids #20, #50, #80, and so on) will be automatically sent to the
                   Public Nouns DAO, for rewards.
-                </Trans>
               </p>
               <p>
-                <Trans>
                   These distributions don't interfere with the cadence of the 12 hour auctions. Public Nouns
-                  are sent directly to the pNounder's Multisig, and auctions continue on schedule
+                  are sent directly to the recipient, and auctions continue on schedule
                   with the next available Public Noun ID.
-                </Trans>
               </p>
             </Accordion.Body>
           </Accordion.Item>
