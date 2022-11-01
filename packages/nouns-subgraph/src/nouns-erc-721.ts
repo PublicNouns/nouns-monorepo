@@ -103,8 +103,9 @@ export function handleTransfer(event: Transfer): void {
   let governance = getGovernanceEntity();
   transferredNounId = event.params.tokenId.toString();
 
-
-  let transferEvent = new TransferEvent(event.transaction.hash.toHexString() + "_" + transferredNounId);
+  let transferEvent = new TransferEvent(
+    event.transaction.hash.toHexString() + '_' + transferredNounId,
+  );
   transferEvent.blockNumber = event.block.number;
   transferEvent.blockTimestamp = event.block.timestamp;
   transferEvent.noun = event.params.tokenId.toString();
@@ -124,7 +125,7 @@ export function handleTransfer(event: Transfer): void {
     fromHolder.nouns = fromHolderNouns.filter(n => n != transferredNounId);
 
     if (fromHolder.delegate != null) {
-      let fromHolderDelegate = getOrCreateDelegate(fromHolder.delegate);
+      let fromHolderDelegate = getOrCreateDelegate(fromHolder.delegate as string);
       let fromHolderNounsRepresented = fromHolderDelegate.nounsRepresented; // Re-assignment required to update array
       fromHolderDelegate.nounsRepresented = fromHolderNounsRepresented.filter(
         n => n != transferredNounId,
@@ -164,18 +165,19 @@ export function handleTransfer(event: Transfer): void {
   let delegateChangedEvent = new DelegationEvent(
     event.transaction.hash.toHexString() + '_' + event.params.tokenId.toString(),
   );
+
   delegateChangedEvent.blockNumber = event.block.number;
   delegateChangedEvent.blockTimestamp = event.block.timestamp;
   delegateChangedEvent.noun = event.params.tokenId.toString();
   delegateChangedEvent.previousDelegate = fromHolder.delegate
-    ? fromHolder.delegate.toString()
+    ? fromHolder.delegate!.toString()
     : fromHolder.id.toString();
   delegateChangedEvent.newDelegate = toHolder.delegate
-    ? toHolder.delegate.toString()
+    ? toHolder.delegate!.toString()
     : toHolder.id.toString();
   delegateChangedEvent.save();
 
-  let toHolderDelegate = getOrCreateDelegate(toHolder.delegate ? toHolder.delegate: toHolder.id);
+  let toHolderDelegate = getOrCreateDelegate(toHolder.delegate ? toHolder.delegate! : toHolder.id);
   let toHolderNounsRepresented = toHolderDelegate.nounsRepresented; // Re-assignment required to update array
   toHolderNounsRepresented.push(transferredNounId);
   toHolderDelegate.nounsRepresented = toHolderNounsRepresented;
