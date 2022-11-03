@@ -96,8 +96,8 @@ const Bid: React.FC<{
   const bidInputHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const input = event.target.value;
 
-    // disable more than 2 digits after decimal point
-    if (input.includes('.') && event.target.value.split('.')[1].length > 2) {
+    // disable more than 3 digits after decimal point
+    if (input.includes('.') && event.target.value.split('.')[1].length > 3) {
       return;
     }
 
@@ -247,7 +247,7 @@ const Bid: React.FC<{
       {showConnectModal && activeAccount === undefined && (
         <WalletConnectModal onDismiss={hideModalHandler} />
       )}
-      <InputGroup style={{marginTop: '25px'}}>
+      <InputGroup style={{ marginTop: '25px' }}>
         {!auctionEnded && (
           <>
             <span className={classes.customPlaceholderBidAmt}>
