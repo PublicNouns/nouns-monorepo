@@ -72,7 +72,7 @@ const app: Record<SupportedChains, AppConfig> = {
   [ChainId.Goerli]: {
     jsonRpcUri: createNetworkHttpUrl('goerli'),
     wsRpcUri: createNetworkWsUrl('goerli'),
-    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/nounsdao/nouns-subgraph',
+    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/bitbeckers/pnouns-goerli',
     enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
   },
   [ChainId.Hardhat]: {
@@ -94,7 +94,7 @@ const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
   },
   [ChainId.Goerli]: {
     lidoToken: '0x2DD6530F136D2B56330792D46aF959D9EA62E276',
-    ogNounsExecutor: '0x0BC3807Ec262cB779b38D65b38158acC3bfedE10',
+    ogNounsExecutor: '0xA603641313C2e35be70899d903dae92c0CD4CEa5',
   },
   [ChainId.Hardhat]: {
     lidoToken: undefined,
