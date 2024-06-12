@@ -66,7 +66,7 @@ const app: Record<SupportedChains, AppConfig> = {
   [ChainId.Mainnet]: {
     jsonRpcUri: createNetworkHttpUrl('mainnet'),
     wsRpcUri: createNetworkWsUrl('mainnet'),
-    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/ipatka/publicnouns-mainnet',
+    subgraphApiUri: 'https://gateway-arbitrum.network.thegraph.com/api/bf74022f4c70b18fb5a6a2128ca3f13f/subgraphs/id/6Wgz1p9ruDS6oN8v6BXGmNER6YM9jnABLGj4bu7u2vHL',
     enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
   },
   [ChainId.Goerli]: {
