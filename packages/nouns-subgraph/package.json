@@ -22,8 +22,8 @@
     "mustache": "mustache"
   },
   "devDependencies": {
-    "@graphprotocol/graph-cli": "^0.20.1",
-    "@graphprotocol/graph-ts": "^0.20.0",
+    "@graphprotocol/graph-cli": "0.56.0",
+    "@graphprotocol/graph-ts": "0.35.1",
     "mustache": "^4.2.0"
   }
 }
